@@ -7,7 +7,8 @@
 <title>Control1</title>
 </head>
 <body>
-<a href="JSP/Ejercicio1.jsp" >Ejercicio1</a>
-<a href="JSP/Ejercicio2.jsp" >Ejercicio2</a>
+
+<a href="/Eje1" >Ejercicio1</a>
+<a href="/Eje2" >Ejercicio2</a>
 </body>
 </html>

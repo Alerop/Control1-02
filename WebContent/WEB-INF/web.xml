@@ -10,9 +10,16 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <display-name>ServletControl</display-name>
-    <servlet-name>ServletControl</servlet-name>
-    <servlet-class>controlador.ServletControl</servlet-class>
+  	<servlet-name>ServletControl1</servlet-name>
+    <servlet-class>controlador.ServletControl1</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>ServletControl1</servlet-name>
+    <url-pattern>/Jose1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletControl2</servlet-name>
+    <servlet-class>controlador.ServletControl2</servlet-class>
     <init-param>
       <param-name>jdbcDriver</param-name>
       <param-value>com.mysql.jdbc.Driver</param-value>
@@ -31,7 +38,7 @@
     </init-param>
   </servlet>
   <servlet-mapping>
-		<servlet-name>ServletControl</servlet-name>
-		<url-pattern>/Jose</url-pattern>
-	</servlet-mapping>
+    <servlet-name>ServletControl2</servlet-name>
+    <url-pattern>/Jose2</url-pattern>
+  </servlet-mapping>
 </web-app>

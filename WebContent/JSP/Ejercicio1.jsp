@@ -7,6 +7,11 @@
 <title>Ejercicio1</title>
 </head>
 <body>
+<%
+	request.getAttribute("Enlaces");
+
+	
+%>
 
 </body>
 </html>
