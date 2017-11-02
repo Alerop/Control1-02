@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="Eje1" >Ejercicio1</a>
-<a href="Eje2" >Ejercicio2</a>
+<a href="Eje1?action=Eje1" >Ejercicio1</a>
+<a href="Eje2?action=Eje2" >Ejercicio2</a>
 </body>
 </html>

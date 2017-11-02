@@ -29,14 +29,34 @@ public class ServletControl1 extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HashMap<String, String> enlaces = new HashMap<String, String>();
-		enlaces.put("google", "http://www.google.es");
-		enlaces.put("youtube", "http://www.youtube.es");
-		enlaces.put("github", "http://www.github.es");
-		request.setAttribute("Enlaces", enlaces);
+		if(request.getParameter("action")==null){
+			RequestDispatcher dispatcher = request.getRequestDispatcher("JSP/index.jsp");
+			dispatcher.forward(request, response);
+		}else{
+			switch (request.getParameter("action")) {
+			case "Eje1":
+
+				HashMap<String, String> enlaces = new HashMap<String, String>();
+				enlaces.put("google", "http://www.google.es");
+				enlaces.put("youtube", "http://www.youtube.es");
+				enlaces.put("github", "http://www.github.es");
+				request.setAttribute("Enlaces", enlaces);
+				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("JSP/Ejercicio1.jsp");
+				dispatcher.forward(request, response);
+				break;
+			case "Eje2":
+
+				dispatcher = request.getRequestDispatcher("JSP/Ejercicio2.jsp");
+				dispatcher.forward(request, response);
+				break;
+			
+			default:
+				dispatcher = request.getRequestDispatcher("JSP/index.jsp");
+				dispatcher.forward(request, response);
+			}
+		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("JSP/Ejercicio1.jsp");
-		dispatcher.forward(request, response);
 		
 	}
 

@@ -7,6 +7,10 @@
 <title>Ejercicio2</title>
 </head>
 <body>
-
+	<form>
+		<p>Introduzca el usuario</p><input type="text" name="usu">
+		<p>Introduzca la contraseña</p><input type="text" name="pass">
+		<input type="submit" value="lanzar">
+	</form>
 </body>
 </html>
