@@ -3,6 +3,7 @@ package controlador;
 import java.io.IOException;
 import java.util.HashMap;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -24,26 +25,19 @@ public class ServletControl1 extends HttpServlet {
         super();
     }
 
-    private HashMap<String, String> enlaces = new HashMap<String, String>();
 
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		ServletContext contexto = config.getServletContext();
 
-		
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HashMap<String, String> enlaces = new HashMap<String, String>();
 		enlaces.put("google", "http://www.google.es");
 		enlaces.put("youtube", "http://www.youtube.es");
 		enlaces.put("github", "http://www.github.es");
+		request.setAttribute("Enlaces", enlaces);
 		
-
-		contexto.setAttribute("Enlaces", enlaces);
-
-	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher dispatcher = request.getRequestDispatcher("JSP/Ejercicio1.jsp");
+		dispatcher.forward(request, response);
+		
 	}
 
 

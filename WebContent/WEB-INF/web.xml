@@ -15,7 +15,7 @@
   </servlet>
     <servlet-mapping>
     <servlet-name>ServletControl1</servlet-name>
-    <url-pattern>/Jose1</url-pattern>
+    <url-pattern>/Eje1</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>ServletControl2</servlet-name>
@@ -39,6 +39,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletControl2</servlet-name>
-    <url-pattern>/Jose2</url-pattern>
+    <url-pattern>/Eje2</url-pattern>
   </servlet-mapping>
 </web-app>
